@@ -367,6 +367,7 @@ exports.register = function (server, options, next) {
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
+      console.log("get")
       reply({
         data: {
           name: 'Face recognition API',
