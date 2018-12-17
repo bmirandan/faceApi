@@ -30,11 +30,4 @@ RUN cd ~ && \
     cd  dlib/ && \
     python3 setup.py install --yes DEUSE_AVX_INSTRUCTIONS
 
- ENV PYTHONUNBUFFERED 1
- RUN mkdir /code
- WORKDIR /code
- COPY requirements.txt /code/
- RUN pip install -r requirements.txt
- COPY . /code/
- EXPOSE 80
- CMD ["python3" ,"server.py","-h","0.0.0.0", "-p" ,"80", "-d","../examples/images"]
+ENV PYTHONUNBUFFERED 1
