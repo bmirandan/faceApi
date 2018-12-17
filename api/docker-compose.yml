@@ -24,8 +24,8 @@ services:
       - recognition
     expose:
       - "80"
-volume:
-  ShareImages
+volumes:
+   ShareImages
 networks:
    default:
       external:
