@@ -1,0 +1,8 @@
+2018-12-08T22:19:02.102Z - error: Image loading error - 403. URL: https://scontent-scl1-1.xx.fbcdn.net/v/t1.0-9/38208405_10215765526232168_6059533920704135168_n.jpg?_nc_cat=104
+2018-12-15T05:41:42.161Z - error: Image loading error - 404. URL: http://localhost:3000/images/84fd830aa1b00cecdcfbae4a3fc15e78.jpg
+2018-12-15T07:24:04.522Z - error: Image loading error - 404. URL: http://localhost:3000/images/84fd830aa1b00cecdcfbae4a3fc15e78.jpg
+2018-12-15T07:33:12.677Z - error: Image loading error - 404. URL: http://localhost:3000/images/84fd830aa1b00cecdcfbae4a3fc15e78.jpg
+2018-12-15T07:33:38.680Z - error: Image loading error - 404. URL: http://localhost:3000/images/84fd830aa1b00cecdcfbae4a3fc15e78.jpg
+2018-12-17T08:25:47.179Z - error: ENOENT: no such file or directory, open 'D:\Infosoc\face-recognition-api\api\undefined\juan-1.jpg'
+2018-12-17T08:26:31.157Z - error: ENOENT: no such file or directory, open 'D:\Infosoc\face-recognition-api\api\undefined\juan-1.jpg'
+2018-12-17T08:27:33.768Z - error: ENOENT: no such file or directory, open 'D:\Infosoc\face-recognition-api\api\undefined\juan-1.jpg'
