@@ -45,7 +45,7 @@ class FaceRPC(object):
             print(time.time() - begin)
             return []
     def training(self):
-        argv = ['-h', '0.0.0.0', '-p', '80', '-d', '../examples/images']
+        argv = ['-h', '0.0.0.0', '-p', '8000', '-d', '../examples/images']
         host = ''
         port = ''
         dir = ''
