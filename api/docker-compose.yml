@@ -11,8 +11,8 @@ services:
       - .:/ShareImages
     working_dir: /ShareImages
     command: sh -c 'npm install; npm run start'
-    ports:
-      - "3000:80"
+    expose:
+      - "80"
       
 networks:
    default:
