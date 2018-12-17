@@ -11,7 +11,6 @@ services:
       - .:/ShareImages
     working_dir: /ShareImages
     command: 'sh -c 'pip install -r requirements.txt; python server.py -h 0.0.0.0 -p 8000 -d ../examples/images'
-    
   faceapi:
     image: node:9.8.0
     restart: always
