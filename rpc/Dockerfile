@@ -30,4 +30,4 @@ RUN cd ~ && \
     cd  dlib/ && \
     python3 setup.py install --yes DEUSE_AVX_INSTRUCTIONS
 
-ENV PYTHONUNBUFFERED 1
+ ENV PYTHONUNBUFFERED 1
