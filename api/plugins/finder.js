@@ -252,6 +252,7 @@ class FinderPlugin {
 
     let imageUrl = request.query.url.trim();
     let extension = this.getUrlExtension(imageUrl);
+
     let imagePath = './examples/downloads' + '/' + this.generateRandomString() + '.' + extension;
 
     logger.debug('Received URL %s', imageUrl);
