@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  imagehandler:
+    restart: always
+    build: .
+    environment:     
+    - VIRTUAL_HOST=images.boldware.cl
+    - VIRTUAL_PORT=80 
+
+networks:
+   default:
+      external:
+         name: nginxproxy_nginx-network
