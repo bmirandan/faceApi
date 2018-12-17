@@ -1,16 +1,6 @@
 version: '2'
 
 services:
-  recognition:
-    image: pythonenv:latest
-    restart: always
-    expose:
-      - "8000"
-    volumes:
-      - .:/ShareImages
-    working_dir: /ShareImages
-    command: 'sh -c 'pip install -r requirements.txt; python server.py -h 0.0.0.0 -p 8000 -d ../examples/images'
-  
   faceapi:
     image: node:9.8.0
     restart: always
@@ -24,7 +14,14 @@ services:
     links:
       - recognition
     expose:
-      - "80"
+      - "80".
+  recognition:
+    image: pythonenv
+    restart: always
+    volumes: .:/ShareImages
+    working_dir: /ShareImages
+    expose: '8000'
+    command: 'sh -c 'pip install -r requirements.txt; python server.py -h 0.0.0.0 -p 8000 -d ../examples/images'    
 volumes:
    ShareImages
 networks:
