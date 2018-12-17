@@ -1,9 +1,8 @@
 version: '2'
 
 services:
-
   recognition:
-    image: pythonenv
+    image: pythonenv:latest
     restart: always
     expose:
       - "8000"
