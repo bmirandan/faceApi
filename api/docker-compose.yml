@@ -8,8 +8,8 @@ services:
     - VIRTUAL_HOST=faceapi.boldware.cl
     - VIRTUAL_PORT=80 
     volumes:
-      - .:ShareImages
-    working_dir: ShareImages
+      - .:/ShareImages
+    working_dir: /ShareImages
     command: sh -c 'npm install; npm run start'
     expose:
       - "80"
