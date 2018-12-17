@@ -3,6 +3,7 @@ version: '2'
 services:
   faceapi:
     image: node:9.8.0
+    restart: always
     environment:     
     - VIRTUAL_HOST=faceapi.boldware.cl
     - VIRTUAL_PORT=80
