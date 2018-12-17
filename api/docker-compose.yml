@@ -1,6 +1,18 @@
 version: '2'
 
 services:
+  recognition:
+    image: pythonenv
+    restart: always
+    environment:     
+    - VIRTUAL_HOST=recognition.boldware.cl
+    - VIRTUAL_PORT=80    
+    command: sh -c 'ls;mkdir examples;cd examples; mkdir images; mkdir downloads; cd .. ; pip install --upgrade pip; pip install -r requirement.txt; python server.py -h 0.0.0.0 -p 8000 -d ./examples/images'
+    volumes:
+      - ./:/usr/src/app  
+    working_dir: /usr/src/app
+    expose:
+      - "80"
   faceapi:
     image: node:9.8.0
     restart: always
@@ -15,16 +27,6 @@ services:
     working_dir: /usr/src/app
     links:
       - recognition
-  recognition:
-    image: pythonenv
-    restart: always
-    command: sh -c 'ls;mkdir examples;cd examples; mkdir images; mkdir downloads; cd .. ; pip install --upgrade pip; pip install -r requirement.txt; python server.py -h 0.0.0.0 -p 8000 -d ./examples/images'
-    volumes:
-      - ./:/usr/src/app  
-    working_dir: /usr/src/app
-
-    expose:
-      - "8000"
 
 networks:
    default:

@@ -166,7 +166,7 @@ class FinderPlugin {
       let logger = serviceProvider.get('logger');
       let client = new zerorpc.Client();
 
-      client.connect('tcp://0.0.0.0:8000'); + //this.options.rpc_host + ':' + this.options.rpc_port);
+      client.connect('tcp://recognition.boldware.cl'); + //this.options.rpc_host + ':' + this.options.rpc_port);
 
       client.invoke('find', imagePath, (error, result) => {
         console.log("here!")
@@ -204,8 +204,8 @@ class FinderPlugin {
       let logger = serviceProvider.get('logger');
       let client = new zerorpc.Client();
 
-      client.connect('tcp://0.0.0.0:8000'); + //this.options.rpc_host + ':' + this.options.rpc_port);
-
+      client.connect('tcp://recognition.boldware.cl'); + //this.options.rpc_host + ':' + this.options.rpc_port);
+        
       client.invoke('training', (error, result) => {
         console.log("hereTrain!")
         console.log(result)
