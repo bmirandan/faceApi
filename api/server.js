@@ -12,7 +12,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 
 server.connection({
-  host: process.env.API_HOST || '0.0.0.0',
+  host: '0.0.0.0',
   port: process.env.API_PORT || 80
 });
 
