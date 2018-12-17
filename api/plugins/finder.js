@@ -118,7 +118,6 @@ class FinderPlugin {
         dest: desPath,
         done: function (error) {
           if (error) {
-            console.log("Algo pasó")
             return reject(error);
           }
 
@@ -166,8 +165,8 @@ class FinderPlugin {
       let serviceProvider = this.server.plugins['ServiceProvider'];
       let logger = serviceProvider.get('logger');
       let client = new zerorpc.Client();
-
-      client.connect('tcp://recognition.boldware.cl:80'); + //this.options.rpc_host + ':' + this.options.rpc_port);
+	console.log("trygin connec")
+      client.connect('tcp://172.18.0.12:80'); + //this.options.rpc_host + ':' + this.options.rpc_port);
 
       client.invoke('find', imagePath, (error, result) => {
         console.log("here!")
@@ -204,9 +203,9 @@ class FinderPlugin {
       let serviceProvider = this.server.plugins['ServiceProvider'];
       let logger = serviceProvider.get('logger');
       let client = new zerorpc.Client();
+       console.log("trygin to connect")	
+      client.connect('tcp://172.18.0.12:80'); + //this.options.rpc_host + ':' + this.options.rpc_port);
 
-      client.connect('tcp://recognition.boldware.cl'); + //this.options.rpc_host + ':' + this.options.rpc_port);
-        
       client.invoke('training', (error, result) => {
         console.log("hereTrain!")
         console.log(result)
@@ -253,8 +252,7 @@ class FinderPlugin {
 
     let imageUrl = request.query.url.trim();
     let extension = this.getUrlExtension(imageUrl);
-
-    let imagePath = './examples/downloads' + '/' + this.generateRandomString() + '.' + extension;
+    let imagePath =  './examples/downloads'  + '/' + this.generateRandomString() + '.' + extension;
 
     logger.debug('Received URL %s', imageUrl);
 
