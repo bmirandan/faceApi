@@ -13,6 +13,8 @@ services:
     volumes:
       - ./:/usr/src/app  
     working_dir: /usr/src/app
+    links:
+      - recognition
   recognition:
     image: pythonenv
     restart: always
@@ -23,8 +25,6 @@ services:
 
     expose:
       - "8000"
-    links:
-      - faceapi
 
 networks:
    default:
