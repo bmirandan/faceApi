@@ -118,6 +118,7 @@ class FinderPlugin {
         dest: desPath,
         done: function (error) {
           if (error) {
+            console.log("Algo pasó")
             return reject(error);
           }
 
@@ -166,7 +167,7 @@ class FinderPlugin {
       let logger = serviceProvider.get('logger');
       let client = new zerorpc.Client();
 
-      client.connect('tcp://recognition.boldware.cl'); + //this.options.rpc_host + ':' + this.options.rpc_port);
+      client.connect('tcp://recognition.boldware.cl:80'); + //this.options.rpc_host + ':' + this.options.rpc_port);
 
       client.invoke('find', imagePath, (error, result) => {
         console.log("here!")
