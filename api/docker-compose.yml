@@ -2,6 +2,7 @@ version: '2'
 
 services:
   faceapi:
+    image: node:argon
     restart: always
     environment:     
     - VIRTUAL_HOST=faceapi.boldware.cl
