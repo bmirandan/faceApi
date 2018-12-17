@@ -3,9 +3,9 @@ version: '2'
 services:
   faceapi:
     image: node:9.8.0
-    enviroment:
-      - VIRTUAL_HOST=faceapi.boldware.cl
-      - VIRTUAL_PORT=80
+    environment:     
+    - VIRTUAL_HOST=faceapi.boldware.cl
+    - VIRTUAL_PORT=80 
     expose:
       - "80"
     volumes:
