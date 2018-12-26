@@ -5,7 +5,7 @@ Register peoplefaces.
 Recognize them in other photo and has multi-face recognition.
 
 
-# Adaptado desde 
+# Seed proyect 
     https://github.com/lehoangduc/face-recognition-api
 # Requirements
     nodejs  8 or superior
