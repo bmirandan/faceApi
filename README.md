@@ -8,7 +8,7 @@ Recognize them in other photo and has multi-face recognition.
 # Adaptado desde 
     https://github.com/lehoangduc/face-recognition-api
 # Requirements
-    nodejs  8 
+    nodejs  8 or superior
     npm or similar
     python 3
     pip or similar
