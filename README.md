@@ -9,8 +9,9 @@ Recognize them in other photo and has multi-face recognition.
     https://github.com/lehoangduc/face-recognition-api
 # Requirements
     nodejs  8 
-    npm
+    npm or similar
     python 3
+    pip or similar
     docker -> deploy
 # Getting started devmode
     Change port 80 for 3000 inside server.js
