@@ -1,5 +1,5 @@
 # faceApi
-This is an early version of api so may have a lot to improve.
+This is an early version of a custom Face Recognition api so may have a lot to improve.
 Can:
 Register peoplefaces.
 Recognize them in other photo and has multi-face recognition.
